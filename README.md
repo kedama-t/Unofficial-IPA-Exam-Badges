@@ -45,13 +45,14 @@ https://unofficial-ipa-exam-badges.vercel.app/{en|ja}/{icon|card}/{EXAM_NAME}/{y
 ![DB](https://unofficial-ipa-exam-badges.vercel.app/ja/card/db/2023/spring)
 ```
 
-プロジェクトマネージャ試験カード(2023年秋季合格)
+プロジェクトマネージャ試験カード(試験名英語/2023年秋季合格)
 
-![PM](https://unofficial-ipa-exam-badges.vercel.app/ja/card/pm/2023/autumn)
+![PM](https://unofficial-ipa-exam-badges.vercel.app/en/card/pm/2023/autumn)
 
 ```
-![PM](https://unofficial-ipa-exam-badges.vercel.app/ja/card/pm/2023/autumn)
+![PM](https://unofficial-ipa-exam-badges.vercel.app/en/card/pm/2023/autumn)
 ```
 
 ## Inspired by
 - [vn7n24fzkq/github-profile-summary-cards](https://github.com/vn7n24fzkq/github-profile-summary-cards)
+- Star icon from [Font Awesome](https://fontawesome.com/) 
