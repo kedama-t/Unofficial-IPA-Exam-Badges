@@ -7,7 +7,7 @@ These icons are unofficial badges that indicate that you have passed the [IPA In
 ## usage
 
 ```
-https://unofficial-ipa-exam-badges.vercel.app/{en|ja}/{icon|card}/{EXAM_NAME}/{year}/{serson}
+https://unofficial-ipa-exam-badges.vercel.app/{en|ja}/{icon|card}/{EXAM_NAME}/{year}/{season}
 ```
 
 ### {EXAM_NAME}
