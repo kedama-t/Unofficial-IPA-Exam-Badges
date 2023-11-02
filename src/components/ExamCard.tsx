@@ -3,7 +3,7 @@ import Stars from './Stars';
 
 import '@/app/globals.css';
 
-const style = { exam: { fontFamily: 'Roboto' } };
+const style = { exam: { fontFamily: 'sans-serif' } };
 
 export default function ExamCard(props: {
   examName: keyof typeof exams;
@@ -70,7 +70,7 @@ export default function ExamCard(props: {
         y="88"
         width="256"
         textAnchor="middle"
-        style={{
+        style={{...style.exam, 
           fontSize: 10,
           fontWeight: 800,
         }}
@@ -83,6 +83,7 @@ export default function ExamCard(props: {
         y="115"
         textAnchor="middle"
         style={{
+          ...style.exam, 
           fontSize: 24,
           fontWeight: 800,
         }}

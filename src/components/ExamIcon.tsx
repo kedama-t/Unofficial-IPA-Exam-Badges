@@ -1,9 +1,7 @@
 import { exams } from '@/src/const.exams';
 import Stars from './Stars';
 
-import '@/app/globals.css';
-
-const style = { exam: { fontFamily: 'Roboto' } };
+const style = { exam: { fontFamily: 'sans-serif' } };
 
 export default function ExamIcon(props: {
   examName: keyof typeof exams;
@@ -53,7 +51,7 @@ export default function ExamIcon(props: {
         CERTIFIED
       </text>
 
-      <Stars pieces={exam.level} x={0} y={55} />
+      <Stars pieces={exam.level} x={0} y={57} />
       <text
         x="50%"
         y="50"
@@ -68,6 +66,7 @@ export default function ExamIcon(props: {
         y="100"
         textAnchor="middle"
         style={{
+          ...style.exam, 
           fontSize: 24,
           fontWeight: 800,
         }}
@@ -80,6 +79,7 @@ export default function ExamIcon(props: {
         y="118"
         textAnchor="middle"
         style={{
+          ...style.exam, 
           fontSize: 14,
           fontWeight: 800,
         }}
