@@ -17,7 +17,7 @@ export default function ExamCard(props: {
     <>
       <defs>
         <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="75%" stopColor={exam.from} />
+          <stop offset="80%" stopColor={exam.from} />
           <stop offset="100%" stopColor={exam.to} />
         </linearGradient>
         <linearGradient id="text" x1="0" x2="0" y1="0" y2="1">

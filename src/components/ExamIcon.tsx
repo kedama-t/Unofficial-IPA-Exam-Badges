@@ -19,11 +19,11 @@ export default function ExamIcon(props: {
         </linearGradient>
         <linearGradient id="text" x1="0" x2="0" y1="0" y2="1">
           <stop offset="75%" stopColor="rgb(248 250 252)" />
-          <stop offset="100%" stopColor="rgb(107 114 128)" />
+          <stop offset="100%" stopColor="rgb(203 213 225)" />
         </linearGradient>
         <linearGradient id="certified" x1="0" x2="0" y1="0" y2="1">
           <stop offset="75%" stopColor="rgb(220 38 38)" />
-          <stop offset="100%" stopColor="rgb(127 29 29)" />
+          <stop offset="100%" stopColor="rgb(203 213 225)" />
         </linearGradient>
       </defs>
       <rect
