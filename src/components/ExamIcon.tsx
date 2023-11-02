@@ -7,11 +7,10 @@ const style = { exam: { fontFamily: 'Roboto' } };
 
 export default function ExamIcon(props: {
   examName: keyof typeof exams;
-  language: 'ja' | 'en';
   year: string;
   season: string;
 }) {
-  const { examName, language, year, season } = props;
+  const { examName, year, season } = props;
   const exam = exams[examName];
   return (
     <>

@@ -1,3 +1,4 @@
+// @ts-ignore
 import * as ReactDOMServer from 'react-dom/server.browser';
 import ExamCard from '@/src/components/ExamCard';
 import { exams } from '@/src/const.exams';
