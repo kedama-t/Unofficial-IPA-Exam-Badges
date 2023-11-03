@@ -3,7 +3,7 @@ import Stars from './Stars';
 
 import '@/app/globals.css';
 
-const style = { exam: { fontFamily: 'sans-serif' } };
+const style = { exam: { fontFamily: 'sans-serif' ,fontWeight: 800} };
 
 export default function ExamCard(props: {
   examName: keyof typeof exams;
@@ -14,7 +14,13 @@ export default function ExamCard(props: {
   const { examName, language, year, season } = props;
   const exam = exams[examName];
   return (
-    <>
+    <svg
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    width="256"
+    height="128"
+    viewBox="0,0,256,128"
+  >
       <defs>
         <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
           <stop offset="80%" stopColor={exam.from} />
@@ -49,7 +55,7 @@ export default function ExamCard(props: {
         x="-25"
         y="36"
         transform="rotate(-45 0,0)"
-        style={{ ...style.exam, fontWeight: 800, fontSize: 9 }}
+        style={{ ...style.exam, fontSize: 9 }}
         fill="url(#certified)"
       >
         CERTIFIED
@@ -72,7 +78,6 @@ export default function ExamCard(props: {
         textAnchor="middle"
         style={{...style.exam, 
           fontSize: 10,
-          fontWeight: 800,
         }}
         fill="url(#text)"
       >
@@ -85,12 +90,11 @@ export default function ExamCard(props: {
         style={{
           ...style.exam, 
           fontSize: 24,
-          fontWeight: 800,
         }}
         fill="url(#text)"
       >
         {year.toUpperCase()} {season.toUpperCase()}
       </text>
-    </>
+    </svg>
   );
 }

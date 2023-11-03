@@ -1,6 +1,7 @@
 // @ts-ignore
 import * as ReactDOMServer from 'react-dom/server.browser';
 import ExamCard from '@/src/components/ExamCard';
+import ExamIcon from '@/src/components/ExamIcon';
 import { exams } from '@/src/const.exams';
 
 export async function GET(
@@ -8,23 +9,18 @@ export async function GET(
   params: {
     params: {
       lang: 'ja' | 'en';
+      style: 'icon' | 'card';
       exam: keyof typeof exams;
       year: string;
       season: string;
     };
   }
 ) {
-  const { lang, exam, year, season } = params.params;
+  const { lang, style, exam, year, season } = params.params;
   const svg = ReactDOMServer.renderToString(
-    <svg
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      width="256"
-      height="128"
-      viewBox="0,0,256,128"
-    >
+    style === "icon" ?
+      <ExamIcon examName={exam} year={year} season={season} /> :
       <ExamCard examName={exam} language={lang} year={year} season={season} />
-    </svg>
   );
 
   return new Response(svg, {

@@ -1,7 +1,7 @@
 import { exams } from '@/src/const.exams';
 import Stars from './Stars';
 
-const style = { exam: { fontFamily: 'sans-serif' } };
+const style = { exam: { fontFamily: 'sans-serif' ,fontWeight: 800} };
 
 export default function ExamIcon(props: {
   examName: keyof typeof exams;
@@ -11,7 +11,13 @@ export default function ExamIcon(props: {
   const { examName, year, season } = props;
   const exam = exams[examName];
   return (
-    <>
+    <svg
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    width="128"
+    height="128"
+    viewBox="0,0,128,128"
+  >
       <defs>
         <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
           <stop offset="90%" stopColor={exam.from} />
@@ -45,7 +51,7 @@ export default function ExamIcon(props: {
         x="-20"
         y="26"
         transform="rotate(-45 0,0)"
-        style={{ ...style.exam, fontWeight: 800, fontSize: 7 }}
+        style={{ ...style.exam, fontSize: 7 }}
         fill="url(#certified)"
       >
         CERTIFIED
@@ -56,7 +62,7 @@ export default function ExamIcon(props: {
         x="50%"
         y="50"
         textAnchor="middle"
-        style={{ ...style.exam, fontWeight: 900, fontSize: 48 }}
+        style={{ ...style.exam, fontSize: 48 }}
         fill="url(#text)"
       >
         {examName.toUpperCase()}
@@ -68,7 +74,6 @@ export default function ExamIcon(props: {
         style={{
           ...style.exam, 
           fontSize: 24,
-          fontWeight: 800,
         }}
         fill="url(#text)"
       >
@@ -81,12 +86,11 @@ export default function ExamIcon(props: {
         style={{
           ...style.exam, 
           fontSize: 14,
-          fontWeight: 800,
         }}
         fill="url(#text)"
       >
         {season.toUpperCase()}
       </text>
-    </>
+    </svg>
   );
 }
