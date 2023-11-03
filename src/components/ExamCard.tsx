@@ -1,8 +1,6 @@
 import { exams } from '@/src/const.exams';
 import Stars from './Stars';
 
-import '@/app/globals.css';
-
 const style = { exam: { fontFamily: 'sans-serif' ,fontWeight: 800} };
 
 export default function ExamCard(props: {
