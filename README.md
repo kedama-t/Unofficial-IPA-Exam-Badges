@@ -27,7 +27,7 @@ https://unofficial-ipa-exam-badges.vercel.app/{en|ja}/{icon|card}/{EXAM_NAME}/{y
 
 ### example
 
-[Preview all icons & cards](https://unofficial-ipa-exam-badges-34p8uxqkb-kedama-t.vercel.app/)
+[Preview all icons & cards](https://unofficial-ipa-exam-badges.vercel.app/)
 
 基本情報技術者試験アイコン(2023年11月合格)
 
