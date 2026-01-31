@@ -1,7 +1,7 @@
-import { exams } from '@/src/const.exams';
-import Stars from './Stars';
+import { exams } from "@/src/const.exams";
+import Stars from "./Stars";
 
-const style = { exam: { fontFamily: 'sans-serif' ,fontWeight: 800} };
+const style = { exam: { fontFamily: "sans-serif", fontWeight: 800 } };
 
 export default function ExamIcon(props: {
   examName: keyof typeof exams;
@@ -12,12 +12,12 @@ export default function ExamIcon(props: {
   const exam = exams[examName];
   return (
     <svg
-    version="1.1"
-    xmlns="http://www.w3.org/2000/svg"
-    width="128"
-    height="128"
-    viewBox="0,0,128,128"
-  >
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      width="128"
+      height="128"
+      viewBox="0,0,128,128"
+    >
       <defs>
         <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
           <stop offset="90%" stopColor={exam.from} />
@@ -72,7 +72,7 @@ export default function ExamIcon(props: {
         y="100"
         textAnchor="middle"
         style={{
-          ...style.exam, 
+          ...style.exam,
           fontSize: 24,
         }}
         fill="url(#text)"
@@ -84,7 +84,7 @@ export default function ExamIcon(props: {
         y="118"
         textAnchor="middle"
         style={{
-          ...style.exam, 
+          ...style.exam,
           fontSize: 14,
         }}
         fill="url(#text)"
