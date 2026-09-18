@@ -4,26 +4,34 @@ import ExamCard from "@/src/components/ExamCard";
 import ExamIcon from "@/src/components/ExamIcon";
 import { exams } from "@/src/const.exams";
 
+// Next.js が生成するルート型では動的セグメントは string のため、
+// ここで受け取ったあとコンポーネントが期待する型へ絞り込む。
+type Params = {
+  lang: string;
+  style: string;
+  exam: string;
+  year: string;
+  season: string;
+};
+
 export async function GET(
   request: Request,
-  {
-    params,
-  }: {
-    params: Promise<{
-      lang: "ja" | "en";
-      style: "icon" | "card";
-      exam: keyof typeof exams;
-      year: string;
-      season: string;
-    }>;
-  }
+  { params }: { params: Promise<Params> }
 ) {
   const { lang, style, exam, year, season } = await params;
+  const examName = exam as keyof typeof exams;
+  const language = lang as "ja" | "en";
+
   const svg = ReactDOMServer.renderToString(
     style === "icon" ? (
-      <ExamIcon examName={exam} year={year} season={season} />
+      <ExamIcon examName={examName} year={year} season={season} />
     ) : (
-      <ExamCard examName={exam} language={lang} year={year} season={season} />
+      <ExamCard
+        examName={examName}
+        language={language}
+        year={year}
+        season={season}
+      />
     )
   );
 
